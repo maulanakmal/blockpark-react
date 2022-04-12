@@ -5,6 +5,7 @@ import "./index.css";
 import Main from "./screens/Main";
 import reportWebVitals from "./reportWebVitals";
 import ActiveReservations from "./screens/ActiveReservations";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
