@@ -1,0 +1,15 @@
+.TextLogo {
+    padding: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: "Anonymous Pro";
+    color: #653dc6;
+    font-weight: bold;
+    font-size: 30px;
+    /* -webkit-text-stroke: 1px white; */
+    /* -webkit-text-fill-color: white; */
+}
