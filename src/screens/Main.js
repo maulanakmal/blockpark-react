@@ -35,11 +35,11 @@ export default class Main extends React.Component {
             </Container>
           </Navbar>
 
-          <div style={contentContainerStyle}>
+          <div>
             <Routes>
               <Route path="/" element={<ActiveReservations />} />
               <Route path="/reservations" element={<ActiveReservations />} />
-              <Route path="/profiles" element={<Profiles />} />
+              <Route path="/profile" element={<Profiles />} />
             </Routes>
           </div>
         </div>
@@ -51,12 +51,4 @@ export default class Main extends React.Component {
 const style = {
   height: "100vh",
   width: "100vw",
-};
-
-const contentContainerStyle = {
-  height: "100%",
-  width: "100%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
 };

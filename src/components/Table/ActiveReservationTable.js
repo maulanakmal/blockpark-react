@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { Table, Card, Badge, Button, Pagination } from "react-bootstrap";
 
-import "./ActiveReservationTable.css";
-
 import { data } from "./data.js";
 
-const BATCH = 8;
+const BATCH = 12;
 
 export default class ActiveReservationTable extends Component {
   constructor(props) {

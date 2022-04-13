@@ -9,7 +9,7 @@ export default class ActiveReservations extends Component {
   render() {
     return (
       <Container>
-        <Row style={{ marginBottom: "30px" }}>
+        <Row style={{ marginTop: "20px", marginBottom: "20px" }}>
           <Col>
             <h1>Active Reservations</h1>
           </Col>

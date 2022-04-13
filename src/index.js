@@ -1,11 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
 import Main from "./screens/Main";
-import reportWebVitals from "./reportWebVitals";
-import ActiveReservations from "./screens/ActiveReservations";
+import reportWebVitals from "./utils/reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const container = document.getElementById("root");
