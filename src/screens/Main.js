@@ -3,16 +3,13 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
-import "./Main.css";
-
 // import Navbar from "../components/Navbar";
 // import TextLogo from "../components/TextLogo";
 // import NavbarItem from "../components/NavbarItem";
 import ActiveReservations from "./ActiveReservations";
-import PastReservations from "./PastReservations";
 import Profiles from "./Profiles";
 
-export default class Welcome extends React.Component {
+export default class Main extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -20,31 +17,28 @@ export default class Welcome extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="Main">
+        <div style={style}>
           <Navbar bg="primary" variant="dark">
             <Container>
               <Navbar.Brand>Blockpark</Navbar.Brand>
               <Nav className="me-auto">
-                <LinkContainer to="/" element={<PastReservations />}>
+                <LinkContainer to="/">
                   <Nav.Link>Active Reservations</Nav.Link>
                 </LinkContainer>
-                <LinkContainer
-                  to="/reservations"
-                  element={<PastReservations />}
-                >
+                <LinkContainer to="/reservations">
                   <Nav.Link>Past Reservations</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/profile" element={<PastReservations />}>
+                <LinkContainer to="/profile">
                   <Nav.Link>Profile</Nav.Link>
                 </LinkContainer>
               </Nav>
             </Container>
           </Navbar>
 
-          <div className="ContentContainer">
+          <div style={contentContainerStyle}>
             <Routes>
               <Route path="/" element={<ActiveReservations />} />
-              <Route path="/reservations" element={<PastReservations />} />
+              <Route path="/reservations" element={<ActiveReservations />} />
               <Route path="/profiles" element={<Profiles />} />
             </Routes>
           </div>
@@ -53,3 +47,16 @@ export default class Welcome extends React.Component {
     );
   }
 }
+
+const style = {
+  height: "100vh",
+  width: "100vw",
+};
+
+const contentContainerStyle = {
+  height: "100%",
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
