@@ -1,17 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./index.css";
 import Main from "./screens/Main";
 import reportWebVitals from "./reportWebVitals";
 import ActiveReservations from "./screens/ActiveReservations";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <Main />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

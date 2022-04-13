@@ -47,6 +47,12 @@ export default class ActiveReservationTable extends Component {
     this.page++;
 
     const reservations = this.fetchData(this.page);
+
+    if (reservations.length == 0) {
+      this.page--;
+      return;
+    }
+
     this.setState({
       reservations: reservations,
     });
